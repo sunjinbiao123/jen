@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+﻿<?xml version="1.0" ?>
 <project name ="javacTest" default="run" basedir=".">
 	
 	 <!-- 定义全局变量 -->
@@ -22,7 +22,7 @@
     <!-- 运行 -->
     <target name="run"  depends ="compile">
      	   	<testng outputdir="${testng.report.dir}" classpathref="classes" >
-    	  	 <xmlfileset dir="." includes="testng1.xml"/>
+    	  	 <xmlfileset dir="." includes="testng.xml"/>
     	  	</testng>
     </target>
 </project>
