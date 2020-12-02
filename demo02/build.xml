@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <project name ="javacTest" default="run" basedir=".">
 	
 	 <!-- 定义全局变量 -->
