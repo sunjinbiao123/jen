@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class demo {
+public class Demo {
 	static WebDriver driver;
 	@Test
 	
@@ -24,11 +24,4 @@ public class demo {
 		driver.findElement(By.linkText("配置")).click();
 		Thread.sleep(1000);
 	}
-
-
-		
-
-	
-
-
 }
