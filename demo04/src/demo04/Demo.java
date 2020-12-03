@@ -17,6 +17,9 @@ public class Demo {
 		driver.findElement(By.name("password")).sendKeys("admin");
 		Thread.sleep(3000);
 		driver.findElement(By.name("login_submit")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.linkText("≈‰÷√")).click();
+		Thread.sleep(1000);
 		driver.quit();
 	}
 }
