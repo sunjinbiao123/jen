@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="s1" verbose="1" >
+	<listeners> 
+		<listener class-name="com.freemarker.WebTestListener" /> 
+		
+	</listeners>
+
+	<test name="test1">
+			<classes>
+			<class name="com.webtest.test.InverstigateOverallPageTest"/>
+			<class name="com.webtest.test.AppearancePageTest"/>
+			<class name="com.webtest.test.ParticipantSetPageTest" />
+			<class name="com.webtest.test.NotificationDataPageTest"/>
+			<class name="com.webtest.test.ReleasseAccessPageTest"/>
+			<class name="com.webtest.test.PlugPageTest"/>
+			<class name="com.webtest.test.MenuItemPageTest"/>
+			<class name="com.webtest.test.MenuPageTeset" />
+			
+		</classes>
+	</test>
+	
+</suite>

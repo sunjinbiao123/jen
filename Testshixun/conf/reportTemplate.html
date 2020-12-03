@@ -1,0 +1,63 @@
+<div style="font-size:12px">
+<h1 align="center">自动化测试报告</h1>
+
+<h2 align="right">  时间${date?string("yyyy-MM-dd HH:mm:ss")}</h2>
+<br/>本次共运行自动化case:${casesize}个。其中Success:${passcasesize}个,FAIL:${failcasesize}个
+
+<br/>
+<br/>
+<div>
+  <table width="100%"  border="1" cellspacing="0"  style="font-size:12px; font-family:'MS Serif', 'New York', serif;">
+  
+  
+   <!-- ʧ��case�б�-->
+  <#if failedList?size gt 0>
+   <tr   height="40">
+    <th  colspan="4" align="center" nowrap bgcolor="#66CC33"   scope="col"><div style="color:red; ">以下caseִ执行失败</div>
+    </th>
+  </tr>
+  <tr bgcolor="#FFCC66" height="35">
+    <th  width="8%"  nowrap scope="col">序号</th>
+    <th  width="15%"    scope="col">test method</th>
+    <th  width="45%"   nowrap scope="col">case title</th>
+    <th    nowrap scope="col">测试结果</th>
+  </tr>
+
+  <#list failedList as case>
+  <tr >
+    <td align="center">${case_index+1}</td>
+    <td>${case.getMethod()}</td>
+    <td align="center">失败</td>
+    <td  bgcolor="red">
+    	<div align="center">Fail</div>
+    </td>
+  </tr>
+  </#list>
+  </#if>
+  
+  <!--�ɹ�case�б�-->
+  <#if (passedList?size gt 0)>
+  <tr   height="40">
+    <th  colspan="4" align="center" nowrap bgcolor="#66CC33"   scope="col">以下case执行成功</th>
+  </tr>
+  <tr bgcolor="#FFCC66" height="35">
+    <th  width="8%" nowrap  scope="col">序号</th>
+    <th  width="15%"    scope="col">test method</th>
+    <th  width="45%"   nowrap scope="col">case title</th>
+    <th    nowrap scope="col">测试结果</th>
+  </tr>
+
+  <#list passedList as case>
+  <tr >
+    <td align="center">${case_index+1}</td>
+    <td>${case.getMethod()}</td>
+    <td align="center">成功</td>
+    <td align="center" bgcolor="#66CC33">
+    	PASS
+    </td>
+  </tr>
+  </#list>
+   </#if>
+
+</table>
+</div>
