@@ -10,7 +10,7 @@ public class Demo {
 	@Test
 	public  void test()throws InterruptedException {
 		System.out.println("hello");
-	/*	System.setProperty("webdriver.gecko.driver", "C:\\Demo\\geckodriver.exe");
+		/*System.setProperty("webdriver.gecko.driver", "C:\\Demo\\geckodriver.exe");
 		 driver =new FirefoxDriver();
 		 driver.get("http://localhost/index.php/admin");
 		
